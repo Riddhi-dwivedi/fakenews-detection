@@ -1,0 +1,56 @@
+
+Model: Logistic Regression
+Accuracy: 0.97686256362795
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.97      0.98      2161
+           1       0.97      0.99      0.98      2161
+
+    accuracy                           0.98      4322
+   macro avg       0.98      0.98      0.98      4322
+weighted avg       0.98      0.98      0.98      4322
+
+--------------------------------------------------
+
+Model: Naive Bayes
+Accuracy: 0.9280425728829246
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.89      0.97      0.93      2161
+           1       0.97      0.89      0.92      2161
+
+    accuracy                           0.93      4322
+   macro avg       0.93      0.93      0.93      4322
+weighted avg       0.93      0.93      0.93      4322
+
+--------------------------------------------------
+
+Model: Decision Tree
+Accuracy: 0.8366496992133272
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.97      0.69      0.81      2161
+           1       0.76      0.98      0.86      2161
+
+    accuracy                           0.84      4322
+   macro avg       0.87      0.84      0.83      4322
+weighted avg       0.87      0.84      0.83      4322
+
+--------------------------------------------------
+
+Model: Passive Aggressive
+Accuracy: 0.987043035631652
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.98      0.99      2161
+           1       0.98      0.99      0.99      2161
+
+    accuracy                           0.99      4322
+   macro avg       0.99      0.99      0.99      4322
+weighted avg       0.99      0.99      0.99      4322
+
+--------------------------------------------------
