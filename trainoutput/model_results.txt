@@ -1,56 +1,56 @@
 
 Model: Logistic Regression
-Accuracy: 0.97686256362795
+Accuracy: 0.9715409532623785
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.99      0.97      0.98      2161
-           1       0.97      0.99      0.98      2161
+           0       0.99      0.96      0.97      2161
+           1       0.96      0.99      0.97      2161
 
-    accuracy                           0.98      4322
-   macro avg       0.98      0.98      0.98      4322
-weighted avg       0.98      0.98      0.98      4322
+    accuracy                           0.97      4322
+   macro avg       0.97      0.97      0.97      4322
+weighted avg       0.97      0.97      0.97      4322
 
 --------------------------------------------------
 
 Model: Naive Bayes
-Accuracy: 0.9280425728829246
+Accuracy: 0.9220268394261916
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.89      0.97      0.93      2161
-           1       0.97      0.89      0.92      2161
+           0       0.89      0.96      0.92      2161
+           1       0.95      0.89      0.92      2161
 
-    accuracy                           0.93      4322
-   macro avg       0.93      0.93      0.93      4322
-weighted avg       0.93      0.93      0.93      4322
+    accuracy                           0.92      4322
+   macro avg       0.92      0.92      0.92      4322
+weighted avg       0.92      0.92      0.92      4322
 
 --------------------------------------------------
 
 Model: Decision Tree
-Accuracy: 0.8366496992133272
+Accuracy: 0.8271633503007867
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.97      0.69      0.81      2161
-           1       0.76      0.98      0.86      2161
+           0       0.98      0.67      0.79      2161
+           1       0.75      0.98      0.85      2161
 
-    accuracy                           0.84      4322
-   macro avg       0.87      0.84      0.83      4322
-weighted avg       0.87      0.84      0.83      4322
+    accuracy                           0.83      4322
+   macro avg       0.86      0.83      0.82      4322
+weighted avg       0.86      0.83      0.82      4322
 
 --------------------------------------------------
 
 Model: Passive Aggressive
-Accuracy: 0.987043035631652
+Accuracy: 0.984266543267006
 Classification Report:
               precision    recall  f1-score   support
 
-           0       0.99      0.98      0.99      2161
-           1       0.98      0.99      0.99      2161
+           0       0.99      0.98      0.98      2161
+           1       0.98      0.99      0.98      2161
 
-    accuracy                           0.99      4322
-   macro avg       0.99      0.99      0.99      4322
-weighted avg       0.99      0.99      0.99      4322
+    accuracy                           0.98      4322
+   macro avg       0.98      0.98      0.98      4322
+weighted avg       0.98      0.98      0.98      4322
 
 --------------------------------------------------

@@ -10,7 +10,7 @@ from sklearn.linear_model import LogisticRegression, PassiveAggressiveClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-
+from sklearn.metrics import roc_curve, auc, roc_auc_score
 # ---------------------------
 # 1️⃣ Load Dataset
 # ---------------------------
@@ -93,6 +93,7 @@ best_model = None
 
 os.makedirs("../models", exist_ok=True)
 os.makedirs("../outputs/confusion_matrices", exist_ok=True)
+os.makedirs("../outputs/roc_curves", exist_ok=True)
 os.makedirs("../trainoutput", exist_ok=True)
 
 results = []
@@ -116,6 +117,18 @@ for name, model in models.items():
     print(f"{name} Accuracy: {accuracy}")
     print(report)
 
+    # ---------------------------
+    # AUC Score
+    # ---------------------------
+
+    try:
+        y_prob = model.predict_proba(X_test_tfidf)[:,1]
+    except:
+        y_prob = model.decision_function(X_test_tfidf)
+
+    auc_score = roc_auc_score(y_test, y_prob)
+
+    print(f"{name} AUC Score: {auc_score}")
     results.append({
         "Model": name,
         "Accuracy": accuracy,
@@ -143,7 +156,31 @@ for name, model in models.items():
     plt.savefig(f"../outputs/confusion_matrices/{name}_cm.png")
 
     plt.close()
+    # ---------------------------
+    # ROC Curve
+    # ---------------------------
 
+    fpr, tpr, thresholds = roc_curve(y_test, y_prob)
+
+    roc_auc = auc(fpr, tpr)
+
+    plt.figure()
+
+    plt.plot(fpr, tpr, label=f"AUC = {roc_auc:.3f}")
+
+    plt.plot([0,1], [0,1], linestyle="--")
+
+    plt.xlabel("False Positive Rate")
+
+    plt.ylabel("True Positive Rate")
+
+    plt.title(f"{name} ROC Curve")
+
+    plt.legend(loc="lower right")
+
+    plt.savefig(f"../outputs/roc_curves/{name}_roc.png")
+
+    plt.close()
 # ---------------------------
 # 9️⃣ Save Accuracy Report
 # ---------------------------
