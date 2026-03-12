@@ -24,63 +24,52 @@ st.set_page_config(
 # -----------------------------
 st.markdown("""
 <style>
-/* Full page background */
+
+/* Background Image */
 [data-testid="stAppViewContainer"] {
-    background: linear-gradient(to right, #e3f2fd, #f8f9fa);
+    background-image: url("https://images.openai.com/static-rsc-3/4vqxR-5w5FFQ1ezo_YiaXXsf2v0Ohz7uYyjz1fUuQtlkGxRUi-ouWIGJois1ZpZiSRRvHIm9kThTLg5xS-SOmt80IWrxMGnf6lPOG3zYs7A?purpose=fullsize&v=1");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
-
 
 /* Card styling */
 .main-card {
-    background-color: white;
+    background-color: rgba(255,255,255,0.85);
     padding: 25px;
     border-radius: 15px;
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
 }
 
-/* Common button style */
+/* Button style */
 .stButton > button {
     border-radius: 10px;
     height: 48px;
     font-weight: 600;
     font-size: 16px;
-    transition: 0.3s ease;
 }
 
-/* First button (Analyze) */
+/* Analyze button */
 div[data-testid="column"]:first-child .stButton > button {
     background-color: #ff4b4b;
     color: white;
-    border: none;
 }
 
-/* Hover effect */
-div[data-testid="column"]:first-child .stButton > button:hover {
-    background-color: #e63939;
-}
-
-/* Second button (Reset) */
+/* Reset button */
 div[data-testid="column"]:nth-child(2) .stButton > button {
-    background-color: transparent;
-    color: #333;
-    border: 1px solid #bbb;
+    background-color: white;
+    border: 1px solid #ccc;
 }
-
-/* Reset hover */
-div[data-testid="column"]:nth-child(2) .stButton > button:hover {
-    background-color: #f2f2f2;
-}
-
-
 
 /* Footer */
 .footer {
     text-align: center;
     font-size: 13px;
-    color: #555;
+    color: #333;
     margin-top: 20px;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -136,3 +125,6 @@ st.markdown(
 '<div class="footer">Fake News Detection using Machine Learning</div>',
 unsafe_allow_html=True
 )
+
+
+
